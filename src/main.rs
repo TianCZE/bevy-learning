@@ -3,8 +3,10 @@ mod debug;
 mod spaceship;
 mod camera;
 mod asteroids;
+mod asset_loader;
 
 use bevy::prelude::*;
+use crate::asset_loader::AssetLoaderPlugin;
 use crate::asteroids::AsteroidsPlugin;
 use crate::camera::CameraPlugin;
 use crate::debug::DebugPlugin;
@@ -22,6 +24,7 @@ fn main() {
         })
         .add_plugins(DefaultPlugins)
         // User defined plugins.
+        .add_plugins(AssetLoaderPlugin)
         .add_plugins(MovementPlugin)
         .add_plugins(AsteroidsPlugin)
         .add_plugins(DebugPlugin)
