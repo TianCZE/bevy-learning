@@ -12,6 +12,7 @@ use crate::asteroids::AsteroidsPlugin;
 use crate::camera::CameraPlugin;
 use crate::collision_detection::CollisionDetectionPlugin;
 use crate::debug::DebugPlugin;
+use crate::despawn::DespawnPlugin;
 use crate::movement::MovementPlugin;
 use crate::spaceship::SpaceshipPlugin;
 use bevy::prelude::*;
@@ -33,5 +34,6 @@ fn main() {
         .add_plugins(CollisionDetectionPlugin)
         .add_plugins(SpaceshipPlugin)
         .add_plugins(CameraPlugin)
+        .add_plugins(DespawnPlugin)
         .run();
 }
